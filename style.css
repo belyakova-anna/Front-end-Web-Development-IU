@@ -214,7 +214,10 @@ body {
   justify-content: center;
 }
 .gallery img {
-  margin: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
   width: 40vw;
   height: auto;
 }
@@ -292,6 +295,15 @@ body {
 
   .skills-row img {
     width: 10vw;
+  }
+
+  .gallery img {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: auto;
   }
 
   .project > .image {
