@@ -188,7 +188,7 @@ body {
 
 .technology-container {
   display: flex;
-  gap: 20px;
+  gap: 2vh;
 }
 
 .oval {
@@ -287,6 +287,7 @@ body {
   .introducing > .image {
     width: 40vw;
     height: 40vw;
+    margin-right: 5vw;
   }
 
   .skills-row img {
@@ -343,12 +344,16 @@ body {
 
 
 @media (max-width: 480px) {
+  main {
+    padding: 0vw 3vw;
+  }
+
   .logo {
     display: none;
   }
 
   section {
-    padding: 7vh 0vh;
+    padding: 5vh 0vh;
   }
   
   .nav {
@@ -379,8 +384,14 @@ body {
     padding: 3vh 0;
   }
 
+  .small-image {
+    width: 5vh;
+    height: auto;
+    margin-right: 2vh;
+  }
+
   h1 {
-    font-size: 6vh;
+    font-size: 5vh;
   }
   
   ul {
@@ -396,7 +407,7 @@ body {
   }
 
   .introducing {
-    padding-top: 20vh;
+    padding-top: 15vh;
   }
 
   .introducing > .image {
