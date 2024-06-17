@@ -543,4 +543,12 @@ body {
     height: 6vh;
     text-decoration: none;
   }
+
+  .social-content > p {
+    width: 80vw;
+  }
+
+  .skills-content > p {
+    width: 80vw;
+  }
 }
