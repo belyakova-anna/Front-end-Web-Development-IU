@@ -18,5 +18,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: 'production'
+  mode: 'production',
+  devServer: {
+    publicPath: "/assets/", // here's the change
+    contentBase: path.join(__dirname, 'public')
+  }
 };
