@@ -20,16 +20,6 @@
   
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  padding: 0vw 7vw;
-  width: 100%;
-}
-
 .logo img {
   height: 5vh;
 }
@@ -57,7 +47,15 @@ main {
 }
 
 
-
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding: 0vw 7vw;
+  width: 100%;
+}
 
 button {
   background-color: rgb(128, 0, 151);
