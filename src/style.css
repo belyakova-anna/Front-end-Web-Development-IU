@@ -30,6 +30,11 @@ main {
   width: 100%;
 }
 
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+
 .logo img {
   height: 5vh;
 }
@@ -73,9 +78,6 @@ button {
   width: 33vh;
 }
 
-body {
-  background-color: rgb(20, 20, 20);
-}
 
 
 
