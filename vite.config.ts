@@ -6,6 +6,15 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base: "/Front-end-Web-Development-IU/",
   plugins: [react()],
+  css: {
+    postcss: {
+      plugins: [],
+    },
+    modules: {
+      // Отключаем CSS модули
+      scopeBehaviour: 'global',
+    },
+  },
   build: {
     target: 'esnext',
     rollupOptions: {

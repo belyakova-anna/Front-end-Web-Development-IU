@@ -1,11 +1,10 @@
-import mePhoto from '../img/photos/me.png';
 import locationIcon from '../img/icons/location.png';
 
 const About: React.FC = () => {
   return (
     <section className="introducing" id="about">
       <div className="image">
-        <img src={mePhoto} alt="Image" />
+        <img src="https://i.postimg.cc/25YZmKhR/me.png" alt="Image" />
       </div>
       <div className="content">
         <h1>Anna Belyakova</h1>
