@@ -1,6 +1,13 @@
 import locationIcon from '../img/icons/location.png';
+import { useNavigate } from 'react-router-dom';
 
 const About: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/comic');
+  };
+
   return (
     <section className="introducing" id="about">
       <div className="image">
@@ -16,7 +23,7 @@ const About: React.FC = () => {
           <li>Full-stack developer</li>
           <li>Competitive programmer</li>
         </ul>
-        <button>Test my knowledge</button>
+        <button onClick={handleButtonClick}>Test my knowledge</button>
       </div>
     </section>
   );
