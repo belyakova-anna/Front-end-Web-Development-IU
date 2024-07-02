@@ -8,7 +8,6 @@ import Photos from './components/Photos';
 import Contact from './components/Contact';
 import Comic from './pages/Comic';
 import './style.css';
-// import './index.ts';
 
 const App: React.FC = () => {
   return (
@@ -25,7 +24,7 @@ const App: React.FC = () => {
             <Contact />
           </main>
         } />
-        <Route path="/comic" element={<Comic />} />
+        <Route path="/comic" element={<Comic email={'a.belyakova@innopolis.university'} />} />
       </Routes>
     </Router>
   );

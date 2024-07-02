@@ -4,19 +4,23 @@ import { formatDistanceToNow } from 'date-fns';
 import loading from '../img/icons/loading.gif';
 import { ComicData } from '../interfaces';
 
-const Comic: React.FC = () => {
+interface ComicProps {
+  email: string;
+}
+
+const Comic: React.FC<ComicProps> = ({ email }) => {
   const [comicData, setComicData] = useState<ComicData | null>(null);
 
   useEffect(() => {
     const getComicData = async () => {
       try {
-        const idResponse = await fetch('https://fwd.innopolis.university/api/hw2?email=a.belyakova@innopolis.university');
+        const idResponse : Response = await fetch(`https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`);
         if (!idResponse.ok) {
           throw new Error(`Status: ${idResponse.status}`);
         }
-        const idData = await idResponse.json();
+        const idData : string = await idResponse.json();
 
-        const comicResponse = await fetch(`https://fwd.innopolis.university/api/comic?id=${idData}`);
+        const comicResponse : Response = await fetch(`https://fwd.innopolis.university/api/comic?id=${idData}`);
         if (!comicResponse.ok) {
           throw new Error(`Status: ${comicResponse.status}`);
         }
@@ -28,7 +32,7 @@ const Comic: React.FC = () => {
     };
 
     getComicData();
-  }, []);
+  }, [email]);
 
   if (!comicData) {
     return (
@@ -50,7 +54,7 @@ const Comic: React.FC = () => {
   };
 
   const { title, img, alt, year, month, day } = comicData;
-  const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  const date : Date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
 
   return (
     <div>
