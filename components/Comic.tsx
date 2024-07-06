@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DOMPurify from "isomorphic-dompurify";
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
@@ -10,6 +10,17 @@ interface ComicProps {
 }
 
 const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
+  const [dateString, setDateString] = useState<string>("Loading...");
+
+  useEffect(() => {
+    if (comicData) {
+      const { year, month, day } = comicData;
+      const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      const formattedDate = `${date.toLocaleDateString()} — ${formatDistanceToNow(date, { addSuffix: true })}`;
+      setDateString(formattedDate);
+    }
+  }, [comicData]);
+
   if (!comicData) {
     return (
       <section className="Comic" id="comic">
@@ -23,7 +34,7 @@ const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
             width={200}
             height={200}
           />
-          <p id="date"></p>
+          <p id="date">{dateString}</p>
         </main>
       </section>
     );
@@ -31,17 +42,12 @@ const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
 
   const secure = (unsafe: string): string => {
     return DOMPurify.sanitize(unsafe, {
-      ALLOWED_TAGS: ["b", "i", "em", "strong", "a"],
-      ALLOWED_ATTR: ["href"],
+      ALLOWED_TAGS: [],
+      ALLOWED_ATTR: [],
     }) as string;
   };
 
-  const { title, img, alt, year, month, day } = comicData;
-  const date: Date = new Date(
-    parseInt(year),
-    parseInt(month) - 1,
-    parseInt(day),
-  );
+  const { title, img, alt } = comicData;
 
   return (
     <section className="Comic" id="comic">
@@ -58,10 +64,7 @@ const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
           width={imgDimensions?.width || 200}
           height={imgDimensions?.height || 200}
         />
-        <p id="date">
-          {date.toLocaleDateString()} —{" "}
-          {formatDistanceToNow(date, { addSuffix: true })}
-        </p>
+        <p id="date" dangerouslySetInnerHTML={{ __html: secure(dateString) }} />
       </main>
     </section>
   );
