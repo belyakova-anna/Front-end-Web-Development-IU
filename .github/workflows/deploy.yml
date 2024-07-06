@@ -43,6 +43,9 @@ jobs:
 
     - name: Setup Pages
       uses: actions/configure-pages@v1
+    
+    - name: Create 'out' directory
+      run: mkdir out  # Создание директории 'out', если её еще нет
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
