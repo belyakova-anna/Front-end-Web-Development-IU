@@ -1,7 +1,7 @@
-import { GetStaticProps } from 'next';
-import Comic from '../components/Comic';
-import { ComicData } from '../interfaces/comicInterface';
-import sizeOf from 'image-size';
+import { GetStaticProps } from "next";
+import Comic from "../components/Comic";
+import { ComicData } from "../interfaces/comicInterface";
+import sizeOf from "image-size";
 
 interface ComicPageProps {
   comicData: ComicData | null;
@@ -13,18 +13,22 @@ const ComicPage: React.FC<ComicPageProps> = ({ comicData, imgDimensions }) => {
 };
 
 export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
-  const email = 'a.belyakova@innopolis.university';
+  const email = "a.belyakova@innopolis.university";
   let comicData: ComicData | null = null;
   let imgDimensions: { width: number; height: number } | null = null;
 
   try {
-    const idResponse = await fetch(`https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`);
+    const idResponse = await fetch(
+      `https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`,
+    );
     if (!idResponse.ok) {
       throw new Error(`Status: ${idResponse.status}`);
     }
     const idData = await idResponse.text();
 
-    const comicResponse = await fetch(`https://fwd.innopolis.university/api/comic?id=${idData}`);
+    const comicResponse = await fetch(
+      `https://fwd.innopolis.university/api/comic?id=${idData}`,
+    );
     if (!comicResponse.ok) {
       throw new Error(`Status: ${comicResponse.status}`);
     }
@@ -38,18 +42,18 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
 
     imgDimensions = {
       width: dimensions.width || 0,
-      height: dimensions.height || 0
+      height: dimensions.height || 0,
     };
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
   }
 
   return {
     props: {
       comicData,
-      imgDimensions
+      imgDimensions,
     },
-    revalidate: 60 * 60 * 24 // регенерация каждые 24 часа
+    revalidate: 60 * 60 * 24, // регенерация каждые 24 часа
   };
 };
 

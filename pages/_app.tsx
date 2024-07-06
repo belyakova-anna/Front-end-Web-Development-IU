@@ -1,8 +1,8 @@
 // pages/_app.tsx
-import React, { ReactNode } from 'react';
-import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
-import '../styles/style.css'; // убедитесь, что путь к CSS правильный
+import React, { ReactNode } from "react";
+import type { AppProps } from "next/app";
+import Layout from "../components/Layout";
+import "../styles/style.css"; // убедитесь, что путь к CSS правильный
 
 interface MyAppProps extends AppProps {
   Component: React.ComponentType;

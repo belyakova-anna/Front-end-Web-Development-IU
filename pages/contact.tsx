@@ -1,16 +1,19 @@
-import React from 'react';
-import SocialIcon from '../components/SocialIcon';
-import telegramIcon from '/public/img/icons/telegram.png';
-import githubIcon from '/public/img/icons/github.png';
-import mailIcon from '/public/img/icons/mail.png';
-import codeforcesIcon from '/public/img/icons/codeforces.png';
+import React from "react";
+import SocialIcon from "../components/SocialIcon";
+import telegramIcon from "/public/img/icons/telegram.png";
+import githubIcon from "/public/img/icons/github.png";
+import mailIcon from "/public/img/icons/mail.png";
+import codeforcesIcon from "/public/img/icons/codeforces.png";
 
 const Contact: React.FC = () => {
   return (
     <section className="ContactMe" id="contact">
       <div className="social-content">
         <h1>Get in touch</h1>
-        <p>Need help from a software engineer? Want to follow me on codeforces? Feel free to message me for work or just to say hi!</p>
+        <p>
+          Need help from a software engineer? Want to follow me on codeforces?
+          Feel free to message me for work or just to say hi!
+        </p>
       </div>
       <div className="social-icons">
         <SocialIcon

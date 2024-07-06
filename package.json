@@ -8,7 +8,8 @@
     "start": "next start",
     "build": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format:check": "prettier --check \"**/*.tsx\""
+    "format:check": "prettier --check \"**/*.tsx\"",
+    "fix": "prettier --write \"**/*.tsx\""
   },
   "dependencies": {
     "date-fns": "^3.6.0",

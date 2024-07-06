@@ -1,7 +1,7 @@
-import React from 'react';
-import UserImage from '../components/UserImage';
-import LocationInfo from '../components/LocationInfo';
-import UserInfo from '../components/UserInfo';
+import React from "react";
+import UserImage from "../components/UserImage";
+import LocationInfo from "../components/LocationInfo";
+import UserInfo from "../components/UserInfo";
 
 const About: React.FC = () => {
   return (

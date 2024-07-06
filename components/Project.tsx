@@ -1,5 +1,5 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image'; // Import Image from next/image
+import React from "react";
+import Image, { StaticImageData } from "next/image"; // Import Image from next/image
 
 interface ProjectProps {
   name: string;
@@ -10,29 +10,40 @@ interface ProjectProps {
   imageAlt: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ name, link, technologies, description, imageSrc, imageAlt }) => {
+const Project: React.FC<ProjectProps> = ({
+  name,
+  link,
+  technologies,
+  description,
+  imageSrc,
+  imageAlt,
+}) => {
   // Convert StaticImageData to string if necessary
-  const imageUrl = typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+  const imageUrl = typeof imageSrc === "string" ? imageSrc : imageSrc.src;
 
   return (
     <div className="project">
       <div className="project-content">
-        <a href={link} target="_blank">{name}</a>
-        
+        <a href={link} target="_blank">
+          {name}
+        </a>
+
         <div className="technology-container">
           {technologies.map((tech, index) => (
-            <div key={index} className="oval">{tech}</div>
+            <div key={index} className="oval">
+              {tech}
+            </div>
           ))}
         </div>
         <p>{description}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-          {typeof imageSrc === 'string' ? (
-            <img src={imageSrc} alt={imageAlt} />
-          ) : (
-            <Image src={imageSrc} alt={imageAlt} className="project-image"/>
-          )}
-        </a>
+        {typeof imageSrc === "string" ? (
+          <img src={imageSrc} alt={imageAlt} />
+        ) : (
+          <Image src={imageSrc} alt={imageAlt} className="project-image" />
+        )}
+      </a>
     </div>
   );
 };
