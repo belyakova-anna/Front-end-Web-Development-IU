@@ -40,12 +40,6 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Export project
-      run: npm run export
-
-    - name: Create 'out' directory
-      run: mkdir -p out  # Создание директории 'out', если её еще нет
-
     - name: Disable Jekyll
       run: touch out/.nojekyll
 

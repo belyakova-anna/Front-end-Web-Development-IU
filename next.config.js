@@ -2,8 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/Front-end-Web-Development-IU',  // замените 'your-repo-name' на имя вашего репозитория
+  basePath: '/Front-end-Web-Development-IU',
   assetPrefix: '/Front-end-Web-Development-IU/',
+  output: 'export',
   trailingSlash: true,  // добавляет слэш в конце каждого пути
   images: {
     remotePatterns: [
