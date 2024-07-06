@@ -508,10 +508,6 @@ body {
     font-size: 2.5vh;
   }
 
-  .introducing {
-    padding-top: 15vh;
-  }
-
   .introducing > .image {
     width: 40vw;
     height: 40vw;
