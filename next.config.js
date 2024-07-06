@@ -7,6 +7,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,  // добавляет слэш в конце каждого пути
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
