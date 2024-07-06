@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/Front-end-Web-Development-IU/',  // замените 'your-repo-name' на имя вашего репозитория
+  basePath: '/Front-end-Web-Development-IU',  // замените 'your-repo-name' на имя вашего репозитория
   assetPrefix: '/Front-end-Web-Development-IU/',
   trailingSlash: true,  // добавляет слэш в конце каждого пути
   images: {
