@@ -53,7 +53,6 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
       comicData,
       imgDimensions,
     },
-    revalidate: 60 * 60 * 24, // регенерация каждые 24 часа
   };
 };
 
