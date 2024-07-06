@@ -1,15 +1,15 @@
 import React from 'react';
-import SkillsRow from './SkillsRow';
-import javaImage from '../img/languages/java.png';
-import pythonImage from '../img/languages/python.png';
-import cSharpImage from '../img/languages/c-sharp.png';
-import cPlusPlusImage from '../img/languages/c++.png';
-import cImage from '../img/languages/c.png';
-import golangImage from '../img/languages/golang.png';
-import gitImage from '../img/languages/git.png';
-import sqlImage from '../img/languages/sql.png';
-import javascriptImage from '../img/languages/javascript.png';
-import figmaImage from '../img/languages/figma.png';
+import SkillsRow from '../components/SkillsRow';
+import javaImage from '/public/img/languages/java.png';
+import pythonImage from '/public/img/languages/python.png';
+import cSharpImage from '/public/img/languages/c-sharp.png';
+import cPlusPlusImage from '/public/img/languages/c++.png';
+import cImage from '/public/img/languages/c.png';
+import golangImage from '/public/img/languages/golang.png';
+import gitImage from '/public/img/languages/git.png';
+import sqlImage from '/public/img/languages/sql.png';
+import javascriptImage from '/public/img/languages/javascript.png';
+import figmaImage from '/public/img/languages/figma.png';
 
 const Skills: React.FC = () => {
   const skillsRow1 = [

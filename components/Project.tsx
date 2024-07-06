@@ -1,19 +1,24 @@
 import React from 'react';
+import Image, { StaticImageData } from 'next/image'; // Import Image from next/image
 
 interface ProjectProps {
   name: string;
   link: string;
   technologies: string[];
   description: string;
-  imageSrc: string;
+  imageSrc: StaticImageData; // Allow both string and StaticImageData types
   imageAlt: string;
 }
 
 const Project: React.FC<ProjectProps> = ({ name, link, technologies, description, imageSrc, imageAlt }) => {
+  // Convert StaticImageData to string if necessary
+  const imageUrl = typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+
   return (
     <div className="project">
       <div className="project-content">
         <a href={link} target="_blank">{name}</a>
+        
         <div className="technology-container">
           {technologies.map((tech, index) => (
             <div key={index} className="oval">{tech}</div>
@@ -21,11 +26,13 @@ const Project: React.FC<ProjectProps> = ({ name, link, technologies, description
         </div>
         <p>{description}</p>
       </div>
-      <div className="image">
-        <a href={link} target="_blank">
-          <img src={imageSrc} alt={imageAlt} />
+      <a href={link} target="_blank" rel="noopener noreferrer">
+          {typeof imageSrc === 'string' ? (
+            <img src={imageSrc} alt={imageAlt} />
+          ) : (
+            <Image src={imageSrc} alt={imageAlt} className="project-image"/>
+          )}
         </a>
-      </div>
     </div>
   );
 };

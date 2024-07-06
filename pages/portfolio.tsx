@@ -1,8 +1,8 @@
 import React from 'react';
-import Project from './Project';
-import princeImage from '../img/projects/prince.jpg';
-import civilDefenseImage from '../img/projects/civil-defense.jpg';
-import geometryDashImage from '../img/projects/geometry-dash.jpg';
+import Project from '../components/Project';
+import princeImage from '/public/img/projects/prince.jpg';
+import civilDefenseImage from '/public/img/projects/civil-defense.jpg';
+import geometryDashImage from '/public/img/projects/geometry-dash.jpg';
 
 const Projects: React.FC = () => {
   return (

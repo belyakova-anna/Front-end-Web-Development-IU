@@ -1,9 +1,9 @@
 import React from 'react';
-import SocialIcon from './SocialIcon';
-import telegramIcon from '../img/icons/telegram.png';
-import githubIcon from '../img/icons/github.png';
-import mailIcon from '../img/icons/mail.png';
-import codeforcesIcon from '../img/icons/codeforces.png';
+import SocialIcon from '../components/SocialIcon';
+import telegramIcon from '/public/img/icons/telegram.png';
+import githubIcon from '/public/img/icons/github.png';
+import mailIcon from '/public/img/icons/mail.png';
+import codeforcesIcon from '/public/img/icons/codeforces.png';
 
 const Contact: React.FC = () => {
   return (

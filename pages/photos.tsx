@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoRow from './PhotoRow';
+import PhotoRow from '../components/PhotoRow';
 
 const Photos: React.FC = () => {
   const photosData = [
