@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/Front-end-Web-Development-IU',
-  assetPrefix: '/Front-end-Web-Development-IU/',
+  // basePath: '/Front-end-Web-Development-IU',
+  // assetPrefix: '/Front-end-Web-Development-IU/',
   output: 'export',
-  trailingSlash: true,  // добавляет слэш в конце каждого пути
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [

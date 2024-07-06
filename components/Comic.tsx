@@ -46,7 +46,6 @@ const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
   return (
     <section className="Comic" id="comic">
       <main>
-        {/* Use 'dangerouslySetInnerHTML' with sanitized title */}
         <h1
           id="title-img"
           dangerouslySetInnerHTML={{ __html: secure(title) }}
@@ -59,7 +58,6 @@ const Comic: React.FC<ComicProps> = ({ comicData, imgDimensions }) => {
           width={imgDimensions?.width || 200}
           height={imgDimensions?.height || 200}
         />
-        {/* Display formatted date */}
         <p id="date">
           {date.toLocaleDateString()} —{" "}
           {formatDistanceToNow(date, { addSuffix: true })}

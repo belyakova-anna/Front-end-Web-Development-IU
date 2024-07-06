@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       <nav className="nav">
         <ul className="nav-list">
           <li>
-            <Link href="/">About me</Link>
+            <Link href="/">Bio</Link>
           </li>
           <li>
             <Link href="/skills">Skills</Link>

@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import Comic from "../components/Comic";
 import { ComicData } from "../interfaces/comicInterface";
 import sizeOf from "image-size";
+import { ISizeCalculationResult } from "image-size/dist/types/interface";
 
 interface ComicPageProps {
   comicData: ComicData | null;
@@ -18,15 +19,15 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
   let imgDimensions: { width: number; height: number } | null = null;
 
   try {
-    const idResponse = await fetch(
+    const idResponse : Response = await fetch(
       `https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`,
     );
     if (!idResponse.ok) {
       throw new Error(`Status: ${idResponse.status}`);
     }
-    const idData = await idResponse.text();
+    const idData : string = await idResponse.text();
 
-    const comicResponse = await fetch(
+    const comicResponse : Response = await fetch(
       `https://fwd.innopolis.university/api/comic?id=${idData}`,
     );
     if (!comicResponse.ok) {
@@ -34,11 +35,10 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
     }
     comicData = await comicResponse.json();
 
-    // Получаем размеры изображения
-    const response = await fetch(comicData!.img);
-    const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    const dimensions = sizeOf(buffer);
+    const response : Response = await fetch(comicData!.img);
+    const arrayBuffer : ArrayBuffer = await response.arrayBuffer();
+    const buffer : Buffer = Buffer.from(arrayBuffer);
+    const dimensions : ISizeCalculationResult = sizeOf(buffer);
 
     imgDimensions = {
       width: dimensions.width || 0,

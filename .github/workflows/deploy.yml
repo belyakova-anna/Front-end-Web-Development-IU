@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - master  # измените на вашу основную ветку, если она отличается
+      - master
   workflow_dispatch:
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
       run: npm run lint
 
     - name: Check formatting
-      run: npm run format:check  # замените на вашу команду для проверки форматирования
+      run: npm run format:check
 
     - name: Build project
       run: npm run build

@@ -1,12 +1,12 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image"; // Import Image from next/image
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectProps {
   name: string;
   link: string;
   technologies: string[];
   description: string;
-  imageSrc: StaticImageData; // Allow both string and StaticImageData types
+  imageSrc: StaticImageData;
   imageAlt: string;
 }
 
@@ -18,7 +18,6 @@ const Project: React.FC<ProjectProps> = ({
   imageSrc,
   imageAlt,
 }) => {
-  // Convert StaticImageData to string if necessary
   const imageUrl = typeof imageSrc === "string" ? imageSrc : imageSrc.src;
 
   return (
