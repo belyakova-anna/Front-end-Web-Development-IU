@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff2');
+  font-family: "Roboto";
+  src: url("https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -41,7 +42,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 main {
   display: flex;
   justify-content: center;
@@ -55,7 +55,6 @@ main {
 body {
   background-color: rgb(20, 20, 20);
 }
-
 
 .logo img {
   height: 5vh;
@@ -84,7 +83,6 @@ body {
   transition: color 0.3s;
 }
 
-
 button {
   background-color: rgb(128, 0, 151);
   color: rgb(0, 0, 0);
@@ -100,9 +98,6 @@ button {
   border-radius: 5px;
   width: 33vh;
 }
-
-
-
 
 h1 {
   color: #400b6c;
@@ -138,12 +133,12 @@ section {
 }
 
 .introducing > .image img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .introducing > .content {
-    flex: 1 1 0;
-    max-width: 80vw;
+  flex: 1 1 0;
+  max-width: 80vw;
 }
 
 body::-webkit-scrollbar {
@@ -157,7 +152,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .introducing {
   align-items: center;
@@ -209,12 +203,12 @@ body {
 }
 
 .project > .image img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .project > .project-content {
-    flex: 1 1 0;
-    max-width: 80vw;
+  flex: 1 1 0;
+  max-width: 80vw;
 }
 
 .project-content > a {
@@ -234,8 +228,6 @@ body {
   padding-bottom: 15vh;
 }
 
-
-
 .technology-container {
   display: flex;
   gap: 2vh;
@@ -254,9 +246,6 @@ body {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
-
-
-
 
 .gallery {
   display: flex;
@@ -313,7 +302,7 @@ body {
   display: block;
 }
 
-.comic-picture{
+.comic-picture {
   height: 26vh;
   width: auto;
 }
@@ -336,7 +325,6 @@ body {
   align-items: center;
 }
 
-
 @media (max-width: 768px) {
   .comic-picture {
     height: 17vh;
@@ -353,11 +341,11 @@ body {
   h1 {
     font-size: 8vh;
   }
-  
+
   ul {
     font-size: 3vh;
   }
-  
+
   p {
     font-size: 3vh;
   }
@@ -402,23 +390,23 @@ body {
     width: 80vw;
     flex: 0 0 auto;
   }
-  
+
   .project > .image img {
-      max-width: 100%;
+    max-width: 100%;
   }
-  
+
   .project > .project-content {
-      flex: 1 1 0;
-      max-width: 80vw;
+    flex: 1 1 0;
+    max-width: 80vw;
   }
-  
+
   .project-content > a {
     font-size: 8vh;
     margin: 3vh 0vh;
     text-decoration: none;
     display: inline-block;
   }
-  
+
   .project {
     display: flex;
     flex-direction: column;
@@ -441,9 +429,7 @@ body {
     height: 5vh;
     text-decoration: none;
   }
-  
 }
-
 
 @media (max-width: 480px) {
   .comic-picture {
@@ -461,26 +447,26 @@ body {
   section {
     padding: 5vh 0vh;
   }
-  
+
   .nav {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  
+
   .nav-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: center;
   }
-  
+
   .nav-list li {
     float: left;
     width: 17vw;
     text-align: center;
   }
-  
+
   .nav-list a {
     text-decoration: none;
     font-size: 2vh;
@@ -499,11 +485,11 @@ body {
   h1 {
     font-size: 5vh;
   }
-  
+
   ul {
     font-size: 2.5vh;
   }
-  
+
   p {
     font-size: 2.5vh;
   }
@@ -532,23 +518,23 @@ body {
     width: 80vw;
     flex: 0 0 auto;
   }
-  
+
   .project > .image img {
-      max-width: 100%;
+    max-width: 100%;
   }
-  
+
   .project > .project-content {
-      flex: 1 1 0;
-      max-width: 80vw;
+    flex: 1 1 0;
+    max-width: 80vw;
   }
-  
+
   .project-content > a {
     font-size: 4vh;
     margin: 2vh 0vh;
     text-decoration: none;
     display: inline-block;
   }
-  
+
   .project {
     display: flex;
     flex-direction: column;
@@ -608,4 +594,3 @@ body {
     width: 80vw;
   }
 }
-

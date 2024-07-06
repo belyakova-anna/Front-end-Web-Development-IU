@@ -7,7 +7,7 @@
     "build": "next build",
     "deploy": "next build && touch out/.nojekyll && git add out && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin master",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format:check": "prettier --check \"**/*.tsx\""
+    "format:check": "prettier --check \"**/*.{tsx,ts,js,jsx,css,yml,yaml}\""
   },
   "dependencies": {
     "date-fns": "^3.6.0",

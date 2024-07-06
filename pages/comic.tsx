@@ -19,15 +19,15 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
   let imgDimensions: { width: number; height: number } | null = null;
 
   try {
-    const idResponse : Response = await fetch(
+    const idResponse: Response = await fetch(
       `https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`,
     );
     if (!idResponse.ok) {
       throw new Error(`Status: ${idResponse.status}`);
     }
-    const idData : string = await idResponse.text();
+    const idData: string = await idResponse.text();
 
-    const comicResponse : Response = await fetch(
+    const comicResponse: Response = await fetch(
       `https://fwd.innopolis.university/api/comic?id=${idData}`,
     );
     if (!comicResponse.ok) {
@@ -35,10 +35,10 @@ export const getStaticProps: GetStaticProps<ComicPageProps> = async () => {
     }
     comicData = await comicResponse.json();
 
-    const response : Response = await fetch(comicData!.img);
-    const arrayBuffer : ArrayBuffer = await response.arrayBuffer();
-    const buffer : Buffer = Buffer.from(arrayBuffer);
-    const dimensions : ISizeCalculationResult = sizeOf(buffer);
+    const response: Response = await fetch(comicData!.img);
+    const arrayBuffer: ArrayBuffer = await response.arrayBuffer();
+    const buffer: Buffer = Buffer.from(arrayBuffer);
+    const dimensions: ISizeCalculationResult = sizeOf(buffer);
 
     imgDimensions = {
       width: dimensions.width || 0,
