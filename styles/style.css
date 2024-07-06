@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+.info-wrapper {
+  flex: 1;
+  box-sizing: border-box;
+}
+
 .header {
   font-family: "Roboto", sans-serif;
   display: flex;

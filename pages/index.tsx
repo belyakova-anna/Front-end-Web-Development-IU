@@ -7,7 +7,7 @@ const About: React.FC = () => {
   return (
     <section className="introducing" id="about">
       <UserImage src="https://i.postimg.cc/25YZmKhR/me.png" alt="Image" />
-      <div className="content-wrapper">
+      <div className="info-wrapper">
         <UserInfo />
         <LocationInfo location="Innopolis, Russia" />
       </div>
