@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master  # измените на вашу основную ветку, если она отличается
-
   workflow_dispatch:
 
 permissions:
@@ -41,11 +40,14 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v1
-    
+    - name: Export project
+      run: npm run export
+
     - name: Create 'out' directory
-      run: mkdir out  # Создание директории 'out', если её еще нет
+      run: mkdir -p out  # Создание директории 'out', если её еще нет
+
+    - name: Disable Jekyll
+      run: touch out/.nojekyll
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
