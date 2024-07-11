@@ -1,5 +1,5 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import React from "react";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectProps {
   name: string;
@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({
   imageSrc,
   imageAlt,
 }) => {
-  const imageUrl = typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+  const imageUrl = typeof imageSrc === "string" ? imageSrc : imageSrc.src;
 
   return (
     <div className="project">
@@ -37,7 +37,7 @@ const Project: React.FC<ProjectProps> = ({
         <p>{description}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        {typeof imageSrc === 'string' ? (
+        {typeof imageSrc === "string" ? (
           <img src={imageSrc} alt={imageAlt} />
         ) : (
           <Image src={imageSrc} alt={imageAlt} className="project-image" />

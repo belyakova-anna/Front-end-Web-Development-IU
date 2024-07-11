@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '/public/img/icons/logo.png';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "/public/img/icons/logo.png";
 
 const Header: React.FC = () => {
   return (

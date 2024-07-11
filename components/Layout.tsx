@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Head from 'next/head';
+import React, { ReactNode } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,10 +9,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="author" content="Anna Belyakova" />
-      </Head>
       <Header />
       <div className="content-wrapper">{children}</div>
       <Footer />
