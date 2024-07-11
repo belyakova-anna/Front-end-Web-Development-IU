@@ -1,5 +1,5 @@
-import React from "react";
-import Photo from "./Photo";
+import React from 'react';
+import Photo from './Photo';
 
 interface PhotoRowProps {
   photos: { src: string; alt: string }[];

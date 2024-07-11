@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import locationIcon from "/public/img/icons/location.png";
+import React from 'react';
+import Image from 'next/image';
+import locationIcon from '/public/img/icons/location.png';
 
 const LocationInfo: React.FC<{ location: string }> = ({ location }) => {
   return (

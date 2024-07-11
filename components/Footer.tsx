@@ -1,9 +1,9 @@
-import React from "react";
-import telegramIcon from "/public/img/icons/telegram.png";
-import githubIcon from "/public/img/icons/github.png";
-import mailIcon from "/public/img/icons/mail.png";
-import codeforcesIcon from "/public/img/icons/codeforces.png";
-import Image from "next/image";
+import React from 'react';
+import telegramIcon from '/public/img/icons/telegram.png';
+import githubIcon from '/public/img/icons/github.png';
+import mailIcon from '/public/img/icons/mail.png';
+import codeforcesIcon from '/public/img/icons/codeforces.png';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
